@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+		
+		{% for profile in profiles %}
+				<div class ="ui segment">
+						{{profile}}
+						<br>
+					
+						<a href="{% url 'zibun' profile.pk %}" class="btn btn-secondary " role="button" aria-pressed="true">
+						<button class = "ui primary button"> プロフィールを見る　</button>
+				 	  </a>
+				</div>
+		{% endfor %}
+{% endblock content %}
+
+
+
+
